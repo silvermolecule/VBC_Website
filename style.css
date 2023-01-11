@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+
+*{
+    font-family: 'Noto Serif', serif;
+}
+
+header{
+    background-color:#9ea8a7;
+    height: 100vh;
+    width: 100%;
+    color:antiquewhite;
+    text-align: center;
+}
+
+.navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 300;
+}
+
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+.menu{
+    display: flex;
+}
+.menu li{
+    list-style: none;
+    padding: 2rem;
+}
+
+.menu a{
+    text-decoration: none;
+    font-size: 1.4rem;
+    padding: 0.2rem;
+}
+
+.menu a:hover{
+    color: aqua;
+}
+
+
+.details{
+    display:inline-flex;
+    text-align: center;
+}
+
+.days, .events, .spon, .parti{
+    text-align: center;
+}
+
+.sponsors{
+    display: flex;
+    position: relative;
+}
+
+.contact{
+    font-size: large;
+}
