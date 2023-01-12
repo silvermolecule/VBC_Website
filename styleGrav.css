@@ -7,12 +7,14 @@
     margin: 0;
     /* background-color: rgb(242, 239, 239); */
 }
-
+body{
+    background-color: #041e34;
+    color:#e0f0f8;
+}
 header{
-    /* background-color: rgb(240, 236, 236); */
-    height: 90vh;
+    height: 30%;
     width: 100%;
-    color:rgb(0, 0, 0);
+    /* color:rgb(0, 0, 0); */
     text-align: center;
 }
 
@@ -24,11 +26,12 @@ header{
 }
 
 .navbar-container{
+    color:rgb(0, 0, 0);
     background-color: white;
     display: flex;
     justify-content:space-around;
     align-items: center;
-    height: 80px;
+    height: 100px;
     font-size: small;
 }
 .links{
@@ -60,28 +63,28 @@ header{
 
 .intro1{
     font-family: 'Merriweather', serif;
-    background-image: url("./intro6.jpg");
+    /* background-image: url("./intro6.jpg");
     background-repeat: no-repeat;
     background-size: 80% 90%;
-    background-position: center;
+    background-position: center; */
     margin-left: 4px;
-    padding-top: 10%;
+    padding-top: 5%;
     font-size: large;
     margin-top: 2%;
-    height: 50vh;
-    color: rgb(255, 255, 255);
+    height: 110vh;
+    /* color: rgb(255, 255, 255); */
 }
-
-.overlay{
+.images{
+    text-align: center;
+}
+/* .overlay{
     margin-left: 10%;
     width: 80%;
-    background-color: rgba(0, 0, 0, 0.6);
-    /* padding: px; */
-}
-.overlay1{
+} */
+/* .overlay1{
     background-color: rgba(0, 0, 0, 0.4);
     padding:7px;
-}
+} */
 
 .details{
     font-weight: 450;
@@ -93,10 +96,13 @@ header{
     text-align: center;
 }
 .Sponsors{
+    background-color: #6da8ce;
     margin-left: 4px;
     /* border-radius: 5px;
     border: 5px solid black; */
-    height: 60%;
+    height: 140vh;
+    color: #041e34;
+    font-weight: 600;
 }
 .Events{
     margin-left: 4px;
@@ -104,29 +110,29 @@ header{
     border: 5px solid black; */
     position: relative;
     margin-top: 3%;
-    height: 60%;
+    height: 150vh;
 }
 .sponsors{
     display: inline-block;
     position: relative;
     text-align: center;
     align-items: center;
-    height: 90vh;
-    margin-bottom: 0%;
+    height: 140vh;
+    /* margin-bottom: 0%; */
 }
 
 .heading{
-    margin: 0 43%;
+    margin: 0 42%;
     margin-bottom: 5px;
 }
 .home{
     padding: 14px;
-    background-image: url("events.jpg");
+    /* background-image: url("events1.jpg"); */
     background-repeat: no-repeat;
     background-size: 80% 90%;
     background-position: center;
     margin-left: 4px;
-    padding-top: 10%;
+    /* padding-top: 10%; */
     height: 100vh;
 }
 
@@ -134,7 +140,7 @@ header{
     margin: 1px 10%;
     margin-bottom: 4px;
     padding: 5px;
-    border: 1px solid grey;
+    /* border: 1px solid grey; */
     position: relative;
 }
 
@@ -151,17 +157,17 @@ header{
 }
 
 .blogcreate, .codequest{
-    margin: 1px 10%;
-    margin-bottom: 4px;
     padding: 14px;
     /* border: 1px solid grey; */
     position: relative;
-    color: white;
-    
+    /* color: rgb(145, 19, 19); */
+    font-weight: 600;
+    display: flex;
 }
 
 .blogcreate h3, .codequest h3{
     text-align: center;
+    font-size: larger;
 }
 /* .blogcreate{
     background-image: url("Blogcreate.jpeg");
@@ -175,10 +181,14 @@ header{
 }
 
 footer{
-    border-top: 1px solid black;
     background-color: white;
-    font-size: medium;
-    margin-top: 2.5%;
+    border-top: 1px solid black;
+    /* background-color: white; */
+    font-size: larger;
+    /* margin: 0 5px; */
+    /* margin-top: 2.5%; */
+    padding: 7px;
     justify-content:space-between;
     display: flex;
+    color:black;
 }
