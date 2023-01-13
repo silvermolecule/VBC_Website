@@ -188,7 +188,7 @@ footer{
     /* margin: 0 5px; */
     /* margin-top: 2.5%; */
     padding: 7px;
-    justify-content:space-between;
+    justify-content:space-evenly;
     display: flex;
     color:black;
 }
