@@ -1,130 +1,250 @@
+<?php
+    session_start();
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styleGrav.css">
-    <link rel="stylesheet" href= "https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="shortcut icon" type="image/x-icon" href="logo.jpg">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,700&family=Noto+Serif&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
-    <title>VBC's GraVITas</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/x-icon" href="img/logo.ico" />
+
+    <!-- Bootstrap CSS -->
+       <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Muli:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/kkb7kdd.css">
+    <title>Visual Bloggers' Club</title>
+
+
 </head>
+
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="navbar-container container">
-                <div class="logo">
-                    &nbsp;<img src="logo.jpg" alt="" height="80px" width="80px">
-                </div>
-                <div>
-                    <h1 class="brand">VISUAL BLOGGERS' CLUB</h1>
-                </div>
-                <div class="links">
-                    <ul class="menu">
-                        <!-- <li><a href="#home">Home</a></li> -->
-                        <li><a href="#Sponsors">Sponsors</a></li>
-                        <li><a href="#heading">Events</a></li>
+
+    <nav class="navbar sticky-top navbar-expand-md">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+                <span class="navbar-toggler-icon">
+                    <i class="fa fa-navicon" style="color:#333333; font-size:28px;"></i>
+                    
+                </span>
+            </button>
+            <div class="d-md-none header2">
+                Visual Bloggers' Club &nbsp;
+                <img src="logo.jpg" height="30" width="30" alt="VBC Logo">
+            </div>
+            
+            <a class="navbar-brand mr-auto" href="#"></a>
+            <div class="collapse navbar-collapse" id="Navbar">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item d-none d-md-block">
+                        <a class="nav-link navbar-heading" href="#">
+                            <img src="logo.jpg" height="30" width="30" alt="VBC Logo">
+                            &nbsp;
+                            Visual Bloggers' Club
+                        </a>
+                    </li>
+                    <!-- <li class="dark-mode" >
+                        <img src="moon.png" alt="dark mode switcher" width="4%" style="cursor: pointer;">
+                    </li> -->
+
+                </ul>
+
+                <span class="nav-item">
+                    <ul class="navbar-nav mr-auto">
+                        <?php if(!isset($_SESSION['user'])){?>
+                        <li class="nav-item"><a class="nav-link" href="/signinv2.php">Login</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/registerv2.php">Register</a></li>
+                        <?php } else{?>
+                        <li class="nav-item"><a class="nav-link" href="/dashboardv2.php">Dashboard</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/logoutv2.php">Logout</a></li>
+                        <?php }?>
                     </ul>
-                </div>
+                </span>
             </div>
-        </nav>
-        <br><br><br>
-        <section class="intro1" id="home">
-            <div class="intro">
-                <h2>Visual Bloggers' Club in GraVITas 2022</h2>
-                <p>The world of Blogging, simplified.</p>
-            </div>
-            <h2>Vellore Institute of Technology, Vellore | September 30<sup>th</sup> - October 2<sup>nd</sup></h2>
-            <div class="details">
-                <div class="days">3 <br>Days</div>&nbsp;&nbsp;
-                <div class="events">2 <br>Events</div>&nbsp;&nbsp; 
-                <div class="spon"> 3 <br>Sponsors</div>&nbsp;&nbsp; 
-                <div class="parti"> 120 <br>Participants</div>&nbsp;&nbsp; 
-            </div>
-            <br><br>
-            <img src="./paste.jpg" alt="" height="600px" width="800px">
-        </section>
-    </header>
-    <main>
-        <br><br><br>
-        <section class="Sponsors" id="Sponsors">
-            <div class="heading">
-                <br><br><br><br>
-                <h1 style="font-size: xx-large;">OUR SPONSORS</h1>
-            </div>
-            <div class="sponsors" id="sponsors">
-                <div class="careerboat">
-                    <img src="Careerboat.png" alt="" height="150px" width="120px">
-                    <!-- <h3>Careerboat</h3> -->
-                    <p>Careerboat has raised INR 3.5 million with further commitment of INR 5 million in equity free funding from investors including StartupIndia, Global incubation services Bangalore, Startup Karnataka elevate. Backed by Indian School of Business Hyderabad and all of being recognised by Govt. of India and Govt. of Karnataka.</p> <br>
-                    <a href="https://careerboat.io/">Visit Careerboat</a>
-                </div>
-                <br>
-                <div class="sblb">
-                    <h3 style="font-size: xx-large;">Sarath Babu’s Lifestyle blogs</h3>
-                    <p>Sarath Babu S, CEO and Founder of his own website Sarath Babu's Lifestyle Blog with a great diversification on his writings about Automobile, Books, Gadgets, Movies, Technology, Travels and much more has imparted unparalleled knowledge on how to write our minds out!
-                    He is also an Assistant Manager at Lotte India Corporation Limited with experience in Computational and Management/ Business fields to give you informational incite on Blogging.</p> <br>
-                    <a href="https://www.sarathbabu.in/">Visit Sarath Babu’s Lifestyle Blogs</a>
-                </div>
-                <br>
-                <div class="vf">
-                    <img src="Voiceflow.jpeg" alt="" height="150px" width="160px">
-                    <!-- <h3>Voiceflow</h3> -->
-                    <p>Voiceflow empowers conversational AI teams to design, prototype, and build conversational assistants together, faster, and at scale. It also provides a platform for students and enthusiasts to learn the latest in tech easily on the web. They provided all participants with a course on web dev, worth $250, for free of cost.</p><br>
-                    <a href="https://www.voiceflow.com/">Visit Voiceflow</a>
-                </div>
-            </div>
-        </section>
-        <br>
-        <section class="Events" id="Events">
-            <div class="heading" id="heading"><br><br><br><br><h1 style="font-size: xx-large;">OUR EVENTS</h1></div>
-            <!-- <div class="images">
-                <br>
-                <img src="ebr.jpg" alt="" height="400px">
-            </div> -->
-            <div class = "home" id="home">
-                <div class="blogcreate">
-                    <div class="content">
-                        <p id="blogcreate">
-                            <h3>BlogCreate2.0</h3>
-                            Blogcreate was a blogging and web development event, with 60 participants competing with each other to create a functional webpage with a creatively written article in it. Speakers, including Mr. Sarath Babu, founder of Sarath Babu’s Lifestyle Blogs, Mr. Diwakar Badiger, co-founder of Careerboat and Mr. Tathagat Thapliyal, a front-end developer from Cred, gave valuable insights to students on a wide array of topics, including the art of writing, UI/UX and other aspects of web development. <br>
-                            The participants, in teams of two, developed visually appealing and responsive web pags, while writing articles on a topic given to them, also improving on their research skills as they explored more information into their topics and web development. They were then judged on the basis of the originality and creativity of their writeups, and their aesthetic appeal and responsiveness of their webpages.
-                        </p>
+        </div>
+    </nav>
+    
+     <!--EXPLORE (left)-->
+     <div class="explore d-none d-md-block fadeIn a1" id="Sponsors" style="min-height: 30%;">
+        <div class="container custom2">
+            <div class="row h-30">
+                <div class="col-12 col-md-5 offset-md-1">
+                    <p class="grey-pretext" style="font-size: larger;">VBC in GraVITas'22</p>
+                    <div class="h3">
+                        <h3>Vellore Institute of Technology <br> September 30<sup>th</sup> - October 2<sup>nd</sup></h3>
                     </div>
-                    <div class="pic">
-                        <img src="blog1.jpg" alt="" height="200px">
+                    <div class="details">
+                        <div class="days"> 3 <br>Days</div>&nbsp;&nbsp;
+                        <div class="event"> 2 <br>Events</div>&nbsp;&nbsp; 
+                        <div class="spon"> 3 <br>Sponsors</div>&nbsp;&nbsp; 
+                        <div class="parti"> 120 <br>Participants</div>&nbsp;&nbsp; 
                     </div>
                 </div>
-                <br>
-                <div class="codequest">
-                    <div class="pic">
-                        <img src="cq.jpg" alt="" height="160px" width="250px">
-                    </div>
-                    <div class="overlay1">
-                        <p id="CodeQuest">
-                            <h3>CodeQuest</h3>
-                            Codequest was a fast-paced fun event into the joys of coding. Students were given a a set of codes in a language of their preference, including Java, Python and C++, and had to predict the output of the code. The students who could correctly predict the output in the shortest amount of time achieved the most score. Participants had a fun and exciting time during the event, and freshers had a first glimpse into the world of programming, providing them with a valuable first experience in university.
-                        </p>
-                    </div>
-                </div>
-                <div style="text-align: center;">
-                    <img src="ebr1.jpg" alt="" height="400px" width="100%">
+                <div class="col-12 col-md-5 offset-md-1">
+                    <img src="paste.jpg" alt="explore" height="400" width="400" class="img-fluid d-block">
                 </div>
             </div>
-        </section>
-    </main>
-    <footer>
-        <div class="copyrights">&copy Visual Bloggers' Club 2023-24</div>
-        <div class="contact">Contact us at:
-            <a href="https://www.instagram.com/vbc_vit/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://twitter.com/vbcvit" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+    <div class="explore-small d-md-none">
+        <div class="container custom2">
+            <div class="row h-30">
+                <div class="col-10 offset-1">
+                    <p class="grey-pretext">VBC in GraVITas'22</p>
+                    <div class="h3"><h3>Vellore Institute of Technology <br> September 30<sup>th</sup> - October 2<sup>nd</sup></h3></div>
+                    <div class="details">
+                        <div class="days"> 3 <br>Days</div>&nbsp;&nbsp;
+                        <div class="event"> 2 <br>Events</div>&nbsp;&nbsp; 
+                        <div class="spon"> 3 <br>Sponsors</div>&nbsp;&nbsp; 
+                        <div class="parti"> 120 <br>Participants</div>&nbsp;&nbsp; 
+                    </div>
+                    <p>
+                        <a href="/blogpagev2.php">
+                            <button type="submit" class="btn text-white black-bg">
+                                &nbsp;Explore&nbsp;
+                            </button>
+                        </a>
+                    </p>
+                </div>
+                <div class="col-10 offset-1">
+                    <img src="paste.jpg" alt="explore" height="500" class="img-fluid d-block">
+                </div>
+            </div> 
+        </div>
+    </div>
+
+    <!--TEAM (right)-->
+    <div class="team d-none d-md-block fadeIn a1">
+        <div class="container custom2">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-5 offset-md-1">
+                    <h3 class="grey-pretext">OUR SPONSORS</h3>
+                    <p class="merri">Visit Our Sponsors' Page</p>
+                    <p>
+                        <a href="sponsors.html">
+                            <button type="submit" class="btn text-white black-bg">
+                                &nbsp;Sponsors&nbsp;
+                            </button>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="team-small d-md-none">
+        <div class="container custom2">
+            <div class="row">
+                <div class="col-10 offset-1">
+                    <h3 class="grey-pretext">OUR SPONSORS</h3>
+                    <p class="merri-small">Visit Our Sponsors' Page</p>
+                    <p>
+                        <a href="sponsors.html">
+                            <button type="submit" class="btn text-white black-bg">
+                                &nbsp;Sponsors&nbsp;
+                            </button>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!--BLOGGER (left)-->
+    <div class="blogger d-none d-md-block fadeIn a1">
+        <div class="container custom2">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-5 offset-md-1" >
+                    <h1>OUR EVENTS</h1>
+                </div>
+            </div>
+            <div class="row w-100">
+                <div class="col-10 col-md-5 offset-md-1">
+                    <h3>BlogCreate2.0</h3>
+                    Blogcreate was a blogging and web development event, with 60 participants competing with each other to create a functional webpage with a creatively written article in it. Speakers, including Mr. Sarath Babu, founder of Sarath Babu’s Lifestyle Blogs, Mr. Diwakar Badiger, co-founder of Careerboat and Mr. Tathagat Thapliyal, a front-end developer from Cred, gave valuable insights to students on a wide array of topics, including the art of writing, UI/UX and other aspects of web development. <br>
+                    The participants, in teams of two, developed visually appealing and responsive web pags, while writing articles on a topic given to them, also improving on their research skills as they explored more information into their topics and web development. They were then judged on the basis of the originality and creativity of their writeups, and their aesthetic appeal and responsiveness of their webpages.
+                </div>
+                <div class="col-12 col-md-5 offset-md-1">
+                    <img src="blog1.jpg" alt="" height="400">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="blogger-small d-md-none">
+        <div class="container custom2">
+            <div class="row">
+                <div class="col-10 offset-1">
+                    <h3>BlogCreate2.0</h3>
+                    Blogcreate was a blogging and web development event, with 60 participants competing with each other to create a functional webpage with a creatively written article in it. Speakers, including Mr. Sarath Babu, founder of Sarath Babu’s Lifestyle Blogs, Mr. Diwakar Badiger, co-founder of Careerboat and Mr. Tathagat Thapliyal, a front-end developer from Cred, gave valuable insights to students on a wide array of topics, including the art of writing, UI/UX and other aspects of web development. <br>
+                    The participants, in teams of two, developed visually appealing and responsive web pags, while writing articles on a topic given to them, also improving on their research skills as they explored more information into their topics and web development. They were then judged on the basis of the originality and creativity of their writeups, and their aesthetic appeal and responsiveness of their webpages.
+                </div>
+                <div class="col-10 offset-1">
+                    <img src="blog1.jpg" alt="blogger" height="500" class="img-fluid d-block">
+                </div>
+            </div> 
+        </div>
+    </div>
+
+    <!--EVENTS (right)-->
+    <div class="events d-none d-md-block fadeIn a1">
+        <div class="container custom2">
+            <div class="row">
+                <div class="col-12 col-md-5 offset-md-1">
+                    <img src="cq.jpg" alt="events" height="300" class="img-fluid d-block">
+                </div>
+                <div class="col-12 col-md-5 offset-md-1">
+                    <br><br>
+                    <h3>CodeQuest</h3>
+                    Codequest was a fast-paced fun event into the joys of coding. Students were given a a set of codes in a language of their preference, including Java, Python and C++, and had to predict the output of the code. The students who could correctly predict the output in the shortest amount of time achieved the most score. Participants had a fun and exciting time during the event, and freshers had a first glimpse into the world of programming, providing them with a valuable first experience in university.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="events-small d-md-none">
+        <div class="container custom2">
+            <div class="row">
+                <div class="col-10 offset-1">
+                    <br><br>
+                    <h3>CodeQuest</h3>
+                    Codequest was a fast-paced fun event into the joys of coding. Students were given a a set of codes in a language of their preference, including Java, Python and C++, and had to predict the output of the code. The students who could correctly predict the output in the shortest amount of time achieved the most score. Participants had a fun and exciting time during the event, and freshers had a first glimpse into the world of programming, providing them with a valuable first experience in university.
+                </div>
+                <div class="col-10 offset-1">
+                    <img src="cq.jpg" alt="events" height="500" class="img-fluid d-block">
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+
+    <footer class="footer1 w-100">
+        <div class="row">
+                <h5>&nbsp;&nbsp; Visual Bloggers' Club 2023-24</h5>
+            <div class="col-12 col-md-4 my-auto custom1 d-none d-md-block">
+                <h3>Connect with us&nbsp;<a href="https://twitter.com/vbcvit" target="_blank"><i class="fa fa-twitter fa-lg fa2"></i></a>
+                <a href="http://instagram.com/vbc_vit" target="_blank"><i class="fa fa-instagram fa-lg fa2"></i></a></h3>
+                    
+            </div>
+            <div class="col-12 col-md-4 my-auto custom1 d-md-none text-center">
+                    <a href="https://twitter.com/vbcvit" target="_blank"><i class="fa fa-twitter fa-lg fa2"></i></a>
+                    <a href="http://instagram.com/vbc_vit" target="_blank"><i class="fa fa-instagram fa-lg fa2"></i></a>
+            </div>
+
         </div>
     </footer>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
+
 </html>
