@@ -1,0 +1,43 @@
+body{
+    background-color: #6da8ce;
+    color: #041e34;
+}
+
+header{
+    background-color: #041e34;
+    width: 100%;
+}
+header .header1{
+    justify-content: center;
+    text-align: center;
+}
+.team {
+    background-color: #6da8ce;
+    color: #041e34;
+}
+
+.team-small {
+    width:100%;
+    background-color: #6da8ce;
+    color: #041e34;
+}
+.footer1 {
+    font-family: merriweather,serif;
+    font-weight: 400;
+    font-style: normal;
+    border-top: 1px #333333 ridge;
+    vertical-align: middle;
+}
+footer{
+    background-color: white;
+    display: flex;
+}
+
+footer h3{
+    color: #000;
+}
+
+footer .row{
+    display: flex;
+    justify-content: space-between;
+}
